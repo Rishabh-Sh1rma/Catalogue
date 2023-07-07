@@ -119,9 +119,7 @@
 
 @media screen and (max-width: 480px) {
   /* Styles for small screen devices */
-  .slider {
-    height: 300px;
-  }
+
 
   .slide img {
     height: 300px;
