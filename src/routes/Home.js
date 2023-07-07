@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Map from "../components/Map";
 import Slider from "../components/Scroll";
+import Whatsapp from "../components/Whatsapp";
+
 
 function Home() {
   return (
@@ -17,6 +19,7 @@ function Home() {
         url="/"
         btnClass="show"
       />
+      <Whatsapp/>
       <Slider />
       <Destination />
       <Map />
