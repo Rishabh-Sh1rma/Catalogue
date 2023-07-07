@@ -1,77 +1,116 @@
-.slider {
-  position: relative;
-  width: 100%;
+.Scrool{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.slider{
+  width: 800px;
   height: 500px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.slider-images {
-  position: absolute;
-  width: 400%;
+.slides{
+  width: 500%;
   height: 500px;
   display: flex;
-  transition: transform 0.5s ease-in-out;
 }
 
-.slider-images img {
-  width: 25%;
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
   height: 500px;
-  object-fit: cover;
 }
 
-.slider-buttons {
+/*css for manual slide navigation*/
+
+.navigation-manual{
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
 }
 
-.prev-btn,
-.next-btn {
-  padding: 10px;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  font-size: 20px;
-  margin: 0 10px;
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 1s;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: transparent;
+.manual-btn:not(:last-child){
+  margin-right: 40px;
 }
 
-@media screen and (max-width: 768px) {
-  /* Styles for mobile devices */
-  .slider {
-    height: 300px;
-  }
-
-  .slider-images {
-    height: 300px;
-  }
-
-  .slider-images img {
-    height: 300px;
-  }
-
-  .slider-buttons {
-    display: none;
-  }
+.manual-btn:hover{
+  background: #40D3DC;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for tablet devices */
-  .slider {
-    height: 400px;
-  }
-
-  .slider-images {
-    height: 400px;
-  }
-
-  .slider-images img {
-    height: 400px;
-  }
+#radio1:checked ~ .first{
+  margin-left: 0;
 }
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+      
