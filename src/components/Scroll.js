@@ -1,6 +1,7 @@
 import "./Scrool.css";
 
 const Slider = () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".slider");
     const sliderImages = document.querySelector(".slider-images");
     const prevBtn = document.querySelector(".prev-btn");
@@ -46,6 +47,7 @@ const Slider = () => {
     sliderImages.addEventListener("touchstart", handleSwipeStart);
     sliderImages.addEventListener("touchmove", handleSwipeMove);
     sliderImages.addEventListener("touchend", handleSwipeEnd);
+});
   
 
   return (
